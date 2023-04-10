@@ -8,6 +8,8 @@ const User = db.users
 
 
 app.get('/', (req, res) => {
+  console.log(env.config.DATABASE_URL);
+  console.log(db.mongoose.connect(env.config.DATABASE_URL))
   const user = new User({
     name:"fabien",
     lastName:"fabien",
